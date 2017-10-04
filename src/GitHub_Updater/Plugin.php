@@ -70,6 +70,10 @@ class Plugin extends Base {
 
 		$plugins     = get_plugins();
 		$git_plugins = array();
+		
+		if( empty( self::$extra_headers ) ) {
+			return array();
+		}
 
 		/**
 		 * Filter to add plugins not containing appropriate header line.
